@@ -158,9 +158,21 @@ header {
 	flex-wrap: wrap;
 	padding: 3rem;
 
+	// Intro Section
+
+	.intro {
+		width: 48%;
+	}
+
 	p {
 		margin-bottom: 1.2rem;
 		line-height: 1.4;
+	}
+
+	// Skills Section
+
+	.skills {
+		width: 48%;
 	}
 	
 	ul {
@@ -179,14 +191,40 @@ header {
 		margin-bottom: 1rem;
 	}
 
-	.intro {
-		width: 48%;
-	}
+	// Work History
 
-	.skills {
-		width: 48%;
+	.work-history {
+		margin-top: 3rem;
+		width: 100%;
+		
+		h2 {
+			padding-bottom: 2rem;
+			border-bottom: 1px solid black;
+			margin: 0;
+		}
+
+		table {
+			width: 100%;
+			font-size: 1.6rem;
+
+			tr:nth-child(even) {
+				background: lightgrey;
+			}
+
+			th {
+				text-align: left;
+				padding: 1.5rem 0;
+			}
+
+			td {
+				padding: .5rem 0;
+			}
+
+		}
 	}
 }
+
+/* Footer */
 
 footer {
 	display: flex;
