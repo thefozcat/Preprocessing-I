@@ -147,8 +147,12 @@ body {
 .container {
   max-width: 1024px;
   margin: auto;
+  background: white;
 }
-p {
+p,
+ul,
+th,
+td {
   font-size: 1.6rem;
 }
 /* Header */
@@ -172,11 +176,11 @@ header .main-nav a {
 }
 header .main-nav a:hover {
   background: lightgrey;
+  transition: background 200ms ease;
 }
 /* Showcase */
 .showcase {
   padding: 3rem;
-  background: lightblue;
   line-height: 1.8;
 }
 .showcase .top-box {
@@ -193,5 +197,53 @@ header .main-nav a:hover {
   margin: 1rem 0;
 }
 .showcase .bottom-box button {
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
+  background: grey;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.showcase .bottom-box button:hover {
+  background: white;
+  color: black;
+  font-weight: 700;
+  transform: scale(1.1);
+  transition: all 200ms ease;
+}
+/* Main Content */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3rem;
+}
+.main-content p {
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+.main-content ul {
+  line-height: 1.5;
+  border: 1px solid black;
+  border-bottom: 0;
+}
+.main-content ul li {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid black;
+}
+.main-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.main-content .intro {
+  width: 48%;
+}
+.main-content .skills {
+  width: 48%;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
 }
