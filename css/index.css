@@ -2,6 +2,12 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -133,4 +139,59 @@ table {
 html,
 body {
   height: 100%;
+  background: lightgrey;
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+/* Global Styles */
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+p {
+  font-size: 1.6rem;
+}
+/* Header */
+header {
+  height: 4rem;
+  background: white;
+}
+header .main-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+header .main-nav a {
+  font-size: 1.4rem;
+  padding: 1.3rem;
+  margin-left: 2rem;
+  text-decoration: none;
+  color: black;
+}
+header .main-nav a:hover {
+  background: lightgrey;
+}
+/* Showcase */
+.showcase {
+  padding: 3rem;
+  background: lightblue;
+  line-height: 1.8;
+}
+.showcase .top-box {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid black;
+}
+.showcase .top-box .profile-pic {
+  width: 35%;
+}
+.showcase .top-box h1 {
+  font-size: 3.2rem;
+}
+.showcase .bottom-box .blurb {
+  margin: 1rem 0;
+}
+.showcase .bottom-box button {
+  padding: 0.5rem 2rem;
 }
