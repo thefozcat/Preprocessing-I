@@ -112,12 +112,20 @@ header {
 		height: 100%;
 		width: 100%;
 
+		@media(max-width: 500px) {
+			justify-content: space-evenly;
+		}
+
 		a {
 			font-size: 1.4rem;
 			padding: 1.3rem;
 			margin: 0 2rem;
 			text-decoration: none;
 			color: black;
+
+			@media(max-width: 500px) {
+				margin: 0;
+			}
 		}
 
 		a:hover {
@@ -140,6 +148,10 @@ header {
 
 		.profile-pic {
 			width: 35%;
+
+			@media(max-width: 500px) {
+				width: 100%;
+			}
 		}
 
 		h1 {
@@ -161,6 +173,11 @@ header {
 			border-radius: 5px;
 			color: white;
 			cursor: pointer;
+
+			@media(max-width: 500px) {
+				margin-top: 1rem;
+				padding: 2rem 3.5rem;
+			}
 		}
 
 		button:hover {
@@ -181,24 +198,42 @@ header {
 	padding: 3rem;
 	background: @secondary-color;
 
+	@media(max-width: 500px) {
+		flex-direction: column;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
 	// Intro Section
 
 	.intro {
 		width: 48%;
-	}
 
-	p {
-		margin-bottom: 1.2rem;
-		line-height: 1.4;
+		p {
+			line-height: 1.4;
+		}
+
+		@media(max-width: 500px) {
+			width: 100%;
+		}
 	}
 
 	// Skills Section
 
 	.skills {
 		width: 48%;
+
+		@media(max-width: 500px) {
+			width: 100%;
+			margin-top: 3rem;
+		}
 	}
 	
 	ul {
+		margin-top: 1.3rem;
 		line-height: 1.5;
 		border: 1px solid black;
 		border-bottom: 0;
@@ -211,11 +246,6 @@ header {
 		li:hover {
 			.color-change;
 		}
-	}
-
-	h2 {
-		font-size: 2.5rem;
-		margin-bottom: 1rem;
 	}
 
 	// Work History
@@ -247,6 +277,31 @@ header {
 				padding: .5rem 1.2rem;
 			}
 
+			@media(max-width: 500px) {
+				display: none;
+			}
+		}
+
+		.mobile-wk-hist {
+			padding: 1.5rem 0;
+			line-height: 1.5;
+			display: none;
+			
+			@media(max-width: 500px) {
+				display: block;
+			}
+
+			h4 {
+				font-size: 1.7rem;
+			}
+
+			.italic {
+				font-style: italic;
+			}
+
+			.break {
+				padding-bottom: 1rem;
+			}
 		}
 	}
 }
