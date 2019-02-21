@@ -10,6 +10,14 @@
 }
 /* Color Variables */
 /* Font Stack */
+/* Mixins */
+.border-bottom {
+  border-bottom: 1px solid black;
+}
+.color-change {
+  background: #D9E0E2;
+  transition: all 200ms ease;
+}
 html,
 body,
 div,
@@ -208,10 +216,10 @@ header .main-nav a:hover {
   cursor: pointer;
 }
 .showcase .bottom-box button:hover {
-  background: #D9E0E2;
   color: black;
   font-weight: 700;
   transform: scale(1.1);
+  background: #D9E0E2;
   transition: all 200ms ease;
 }
 /* Main Content */
