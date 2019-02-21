@@ -237,6 +237,10 @@ header .main-nav a:hover {
   padding: 0.5rem 1rem;
   border-bottom: 1px solid black;
 }
+.main-content ul li:hover {
+  background: lightgrey;
+  transition: all 200ms ease;
+}
 .main-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -259,10 +263,21 @@ header .main-nav a:hover {
 }
 .main-content .work-history table th {
   text-align: left;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1.2rem;
 }
 .main-content .work-history table td {
-  padding: 0.5rem 0;
+  padding: 0.5rem 1.2rem;
+}
+/* Contact */
+.contact {
+  padding: 0 3rem 3rem 3rem;
+}
+.contact h2 {
+  font-size: 2.5rem;
+}
+.contact .contact-info {
+  padding: 2rem;
+  line-height: 2;
 }
 /* Footer */
 footer {
