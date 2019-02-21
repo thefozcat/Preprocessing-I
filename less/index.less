@@ -6,6 +6,17 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/* Color Variables */
+
+@primary-color: #A4BCC4;
+@secondary-color: #F4F3F3;
+@accent-color: #8F9294;
+@highlight: #D9E0E2;
+
+/* Font Stack */
+
+@font-stack: Arial, "sans-serif";
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,7 +68,7 @@ table {
 
 html, body {
 	height: 100%;
-	background: lightgrey;
+	background: @highlight;
 	font-size: 62.5%;
 	font-family: 'Roboto', sans-serif;
 }
@@ -67,13 +78,13 @@ html, body {
 .container {
 	max-width: 1024px;
 	margin: auto;
-	background: white;
 }
 
 p,
 ul, 
 th,
 td {
+	font-family: @font-stack;
 	font-size: 1.6rem;
 }
 
@@ -81,7 +92,7 @@ td {
 
 header {
 	height: 4rem;
-	background: white;
+	background: @secondary-color;
 
 	.main-nav {
 		display: flex;
@@ -93,13 +104,13 @@ header {
 		a {
 			font-size: 1.4rem;
 			padding: 1.3rem;
-			margin-left: 2rem;
+			margin: 0 2rem;
 			text-decoration: none;
 			color: black;
 		}
 
 		a:hover {
-			background: lightgrey;
+			background: @accent-color;
 			transition: background 200ms ease;
 		}
 	}
@@ -110,6 +121,7 @@ header {
 .showcase {
 	padding: 3rem;
 	line-height: 1.8;
+	background: @primary-color;
 
 	.top-box {
 		padding-bottom: 1.5rem;
@@ -133,7 +145,7 @@ header {
 
 		button {
 			padding: 1rem 2rem;
-			background: grey;
+			background: @accent-color;
 			border: 0;
 			border-radius: 5px;
 			color: white;
@@ -141,7 +153,7 @@ header {
 		}
 
 		button:hover {
-			background: white;
+			background: @highlight;
 			color: black;
 			font-weight: 700;
 			transform: scale(1.1);
@@ -157,6 +169,7 @@ header {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	padding: 3rem;
+	background: @secondary-color;
 
 	// Intro Section
 
@@ -186,7 +199,7 @@ header {
 		}
 
 		li:hover {
-			background: lightgrey;
+			background: @highlight;
 			transition: all 200ms ease;
 		}
 	}
@@ -213,7 +226,7 @@ header {
 			font-size: 1.6rem;
 
 			tr:nth-child(even) {
-				background: lightgrey;
+				background: @highlight;
 			}
 
 			th {
@@ -232,7 +245,8 @@ header {
 /* Contact */
 
 .contact {
-	padding: 0 3rem 3rem 3rem;
+	padding: 3rem;
+	background: @primary-color;
 	
 	h2 {
 		font-size: 2.5rem;
@@ -251,5 +265,6 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 8rem;
+	height: 7rem;
+	background: @accent-color;
 }
