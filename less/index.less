@@ -19,11 +19,11 @@
 
 /* Mixins */
 
-.border-bottom {
+.border-bottom() {
 	border-bottom: 1px solid black;
 }
 
-.color-change {
+.color-change() {
 	background: @highlight;
 	transition: all 200ms ease;
 }
@@ -144,7 +144,7 @@ header {
 
 	.top-box {
 		padding-bottom: 1.5rem;
-		.border-bottom;
+		.border-bottom();
 
 		.profile-pic {
 			width: 35%;
@@ -184,7 +184,7 @@ header {
 			color: black;
 			font-weight: 700;
 			transform: scale(1.1);
-			.color-change;
+			.color-change();
 		}
 	}
 }
@@ -240,11 +240,11 @@ header {
 
 		li {
 			padding: .5rem 1rem;
-			.border-bottom;
+			.border-bottom();
 		}
 
 		li:hover {
-			.color-change;
+			.color-change();
 		}
 	}
 
@@ -256,7 +256,7 @@ header {
 		
 		h2 {
 			padding-bottom: 2rem;
-			.border-bottom;
+			.border-bottom();
 			margin: 0;
 		}
 
