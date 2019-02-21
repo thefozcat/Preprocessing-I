@@ -4,6 +4,30 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Color Variables */
+
+@primary-color: #A4BCC4;
+@secondary-color: #F4F3F3;
+@accent-color: #8F9294;
+@highlight: #D9E0E2;
+
+/* Font Stack */
+
+@font-stack: Arial, "sans-serif";
+
+/* Mixins */
+
+.border-bottom() {
+	border-bottom: 1px solid black;
+}
+
+.color-change() {
+	background: @highlight;
+	transition: all 200ms ease;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,7 +44,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 100%;	
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -54,6 +78,257 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background: @highlight;
+	font-size: 62.5%;
+	font-family: 'Roboto', sans-serif;
 }
 
+/* Global Styles */
+
+.container {
+	max-width: 1024px;
+	margin: auto;
+}
+
+p,
+ul, 
+th,
+td {
+	font-family: @font-stack;
+	font-size: 1.6rem;
+}
+
+/* Header */
+
+header {
+	height: 4rem;
+	background: @secondary-color;
+
+	.main-nav {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+
+		@media(max-width: 500px) {
+			justify-content: space-evenly;
+		}
+
+		a {
+			font-size: 1.4rem;
+			padding: 1.3rem;
+			margin: 0 2rem;
+			text-decoration: none;
+			color: black;
+
+			@media(max-width: 500px) {
+				margin: 0;
+			}
+		}
+
+		a:hover {
+			background: @accent-color;
+			transition: background 200ms ease;
+		}
+	}
+}
+
+/* Showcase */
+
+.showcase {
+	padding: 3rem;
+	line-height: 1.8;
+	background: @primary-color;
+
+	.top-box {
+		padding-bottom: 1.5rem;
+		.border-bottom();
+
+		.profile-pic {
+			width: 35%;
+
+			@media(max-width: 500px) {
+				width: 100%;
+			}
+		}
+
+		h1 {
+			font-size: 3.2rem;
+		}
+
+	}
+
+	.bottom-box {
+
+		.blurb {
+			margin: 1rem 0;
+		}
+
+		button {
+			padding: 1rem 2rem;
+			background: @accent-color;
+			border: 0;
+			border-radius: 5px;
+			color: white;
+			cursor: pointer;
+
+			@media(max-width: 500px) {
+				margin-top: 1rem;
+				padding: 2rem 3.5rem;
+			}
+		}
+
+		button:hover {
+			color: black;
+			font-weight: 700;
+			transform: scale(1.1);
+			.color-change();
+		}
+	}
+}
+
+/* Main Content */
+
+.main-content {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 3rem;
+	background: @secondary-color;
+
+	@media(max-width: 500px) {
+		flex-direction: column;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	// Intro Section
+
+	.intro {
+		width: 48%;
+
+		p {
+			line-height: 1.4;
+		}
+
+		@media(max-width: 500px) {
+			width: 100%;
+		}
+	}
+
+	// Skills Section
+
+	.skills {
+		width: 48%;
+
+		@media(max-width: 500px) {
+			width: 100%;
+			margin-top: 3rem;
+		}
+	}
+	
+	ul {
+		margin-top: 1.3rem;
+		line-height: 1.5;
+		border: 1px solid black;
+		border-bottom: 0;
+
+		li {
+			padding: .5rem 1rem;
+			.border-bottom();
+		}
+
+		li:hover {
+			.color-change();
+		}
+	}
+
+	// Work History
+
+	.work-history {
+		margin-top: 3rem;
+		width: 100%;
+		
+		h2 {
+			padding-bottom: 2rem;
+			.border-bottom();
+			margin: 0;
+		}
+
+		table {
+			width: 100%;
+			font-size: 1.6rem;
+
+			tr:nth-child(even) {
+				background: @highlight;
+			}
+
+			th {
+				text-align: left;
+				padding: 1.5rem 1.2rem;
+			}
+
+			td {
+				padding: .5rem 1.2rem;
+			}
+
+			@media(max-width: 500px) {
+				display: none;
+			}
+		}
+
+		.mobile-wk-hist {
+			padding: 1.5rem 0;
+			line-height: 1.5;
+			display: none;
+			
+			@media(max-width: 500px) {
+				display: block;
+			}
+
+			h4 {
+				font-size: 1.7rem;
+			}
+
+			.italic {
+				font-style: italic;
+			}
+
+			.break {
+				padding-bottom: 1rem;
+			}
+		}
+	}
+}
+
+/* Contact */
+
+.contact {
+	padding: 3rem;
+	background: @primary-color;
+	
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	.contact-info {
+		padding: 2rem;
+		line-height: 2;
+	}
+
+}
+
+/* Footer */
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 7rem;
+	background: @accent-color;
+}
